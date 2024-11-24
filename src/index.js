@@ -1,5 +1,5 @@
-import galleryTemplate from '../templates/gallery-item.handlebars';
-import items from './countries.json';
+import galleryTemplate from '../templates/heroes.handlebars';
+import items from './heroes.json';
 
 const list = document.querySelector(`.gallery`);
 const layout = galleryTemplate(items);

@@ -1,0 +1,13 @@
+{{#each this}}
+  <li class='gallery__item'>
+    <div class='gallery__thumb'>
+      <img class='img' src='{{img}}' alt='hero ' width='320' />
+    </div>
+    <h2>{{hero}}</h2>
+    <p>Weapon: {{weapon}}</p>
+    {{#each skills}}
+      <p>skill: {{@this}}</p>
+    {{/each}}
+
+  </li>
+{{/each}}

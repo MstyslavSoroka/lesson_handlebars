@@ -586,16 +586,16 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"8lqZg":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _galleryItemHandlebars = require("../templates/gallery-item.handlebars");
-var _galleryItemHandlebarsDefault = parcelHelpers.interopDefault(_galleryItemHandlebars);
-var _countriesJson = require("./countries.json");
-var _countriesJsonDefault = parcelHelpers.interopDefault(_countriesJson);
+var _heroesHandlebars = require("../templates/heroes.handlebars");
+var _heroesHandlebarsDefault = parcelHelpers.interopDefault(_heroesHandlebars);
+var _heroesJson = require("./heroes.json");
+var _heroesJsonDefault = parcelHelpers.interopDefault(_heroesJson);
 const list = document.querySelector(`.gallery`);
-const layout = (0, _galleryItemHandlebarsDefault.default)((0, _countriesJsonDefault.default));
+const layout = (0, _heroesHandlebarsDefault.default)((0, _heroesJsonDefault.default));
 list.innerHTML = layout;
 console.log(layout);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../templates/gallery-item.handlebars":"atd6D","./countries.json":"dFJ8R"}],"gkKU3":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../templates/heroes.handlebars":"1KStQ","./heroes.json":"jjjeP"}],"gkKU3":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -625,102 +625,79 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"atd6D":[function(require,module,exports,__globalThis) {
+},{}],"1KStQ":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _handlebars = require("handlebars");
 var _handlebarsDefault = parcelHelpers.interopDefault(_handlebars);
 const templateFunction = (0, _handlebarsDefault.default).template({
     "1": function(container, depth0, helpers, partials, data) {
-        var helper, alias1 = depth0 != null ? depth0 : container.nullContext || {}, alias2 = container.hooks.helperMissing, alias3 = "function", alias4 = container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
+        var stack1, helper, alias1 = depth0 != null ? depth0 : container.nullContext || {}, alias2 = container.hooks.helperMissing, alias3 = "function", alias4 = container.escapeExpression, lookupProperty = container.lookupProperty || function(parent, propertyName) {
             if (Object.prototype.hasOwnProperty.call(parent, propertyName)) return parent[propertyName];
             return undefined;
         };
-        return "<li class=\"gallery__item\">\r\n    <div class=\"gallery__thumb\">\r\n        <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "flag") || (depth0 != null ? lookupProperty(depth0, "flag") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-            "name": "flag",
+        return "  <li class='gallery__item'>\r\n    <div class='gallery__thumb'>\r\n      <img class='img' src='" + alias4((helper = (helper = lookupProperty(helpers, "img") || (depth0 != null ? lookupProperty(depth0, "img") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "img",
             "hash": {},
             "data": data,
             "loc": {
                 "start": {
                     "line": 4,
-                    "column": 18
+                    "column": 28
                 },
                 "end": {
                     "line": 4,
-                    "column": 26
+                    "column": 35
                 }
             }
-        }) : helper)) + '" alt="\u041F\u0440\u0430\u043F\u043E\u0440 " width="320">\r\n    </div>\r\n        <h2>' + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-            "name": "name",
+        }) : helper)) + "' alt='hero ' width='320' />\r\n    </div>\r\n    <h2>" + alias4((helper = (helper = lookupProperty(helpers, "hero") || (depth0 != null ? lookupProperty(depth0, "hero") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "hero",
             "hash": {},
             "data": data,
             "loc": {
                 "start": {
                     "line": 6,
-                    "column": 12
+                    "column": 8
                 },
                 "end": {
                     "line": 6,
-                    "column": 20
+                    "column": 16
                 }
             }
-        }) : helper)) + "</h2>\r\n        <p><b>\u0421\u0442\u043E\u043B\u0438\u0446\u044F: " + alias4((helper = (helper = lookupProperty(helpers, "capital") || (depth0 != null ? lookupProperty(depth0, "capital") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-            "name": "capital",
+        }) : helper)) + "</h2>\r\n    <p>Weapon: " + alias4((helper = (helper = lookupProperty(helpers, "weapon") || (depth0 != null ? lookupProperty(depth0, "weapon") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+            "name": "weapon",
             "hash": {},
             "data": data,
             "loc": {
                 "start": {
                     "line": 7,
-                    "column": 23
+                    "column": 15
                 },
                 "end": {
                     "line": 7,
-                    "column": 34
-                }
-            }
-        }) : helper)) + "</b></p>\r\n        <p><b>\u0412\u0430\u043B\u044E\u0442\u0430: " + alias4((helper = (helper = lookupProperty(helpers, "currency") || (depth0 != null ? lookupProperty(depth0, "currency") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-            "name": "currency",
-            "hash": {},
-            "data": data,
-            "loc": {
-                "start": {
-                    "line": 8,
-                    "column": 22
-                },
-                "end": {
-                    "line": 8,
-                    "column": 34
-                }
-            }
-        }) : helper)) + "</b></p>\r\n        <p><b>\u041E\u0444\u0438\u0446\u0456\u0439\u043D\u0430 \u043C\u043E\u0432\u0430: " + alias4((helper = (helper = lookupProperty(helpers, "language") || (depth0 != null ? lookupProperty(depth0, "language") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-            "name": "language",
-            "hash": {},
-            "data": data,
-            "loc": {
-                "start": {
-                    "line": 9,
-                    "column": 29
-                },
-                "end": {
-                    "line": 9,
-                    "column": 41
-                }
-            }
-        }) : helper)) + "</b> </p>\r\n        <p><b>\u041D\u0430\u0441\u0435\u043B\u0435\u043D\u043D\u044F: " + alias4((helper = (helper = lookupProperty(helpers, "population") || (depth0 != null ? lookupProperty(depth0, "population") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-            "name": "population",
-            "hash": {},
-            "data": data,
-            "loc": {
-                "start": {
-                    "line": 10,
                     "column": 25
+                }
+            }
+        }) : helper)) + "</p>\r\n" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "skills") : depth0, {
+            "name": "each",
+            "hash": {},
+            "fn": container.program(2, data, 0),
+            "inverse": container.noop,
+            "data": data,
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 4
                 },
                 "end": {
                     "line": 10,
-                    "column": 39
+                    "column": 13
                 }
             }
-        }) : helper)) + "</b> \u043B\u044E\u0434\u0435\u0439</p> \r\n</li>\r\n";
+        })) != null ? stack1 : "") + "\r\n  </li>\r\n";
+    },
+    "2": function(container, depth0, helpers, partials, data) {
+        return "      <p>skill: " + container.escapeExpression(container.lambda(depth0, depth0)) + "</p>\r\n";
     },
     "compiler": [
         8,
@@ -743,7 +720,7 @@ const templateFunction = (0, _handlebarsDefault.default).template({
                     "column": 0
                 },
                 "end": {
-                    "line": 12,
+                    "line": 13,
                     "column": 9
                 }
             }
@@ -11925,8 +11902,8 @@ var isSourceNode = "$$$isSourceNode$$$";
 };
 exports.SourceNode = SourceNode;
 
-},{"a07d2c2c4b11c39f":"eAEEU","18d5ff036a08fa06":"tCCrk"}],"dFJ8R":[function(require,module,exports,__globalThis) {
-module.exports = JSON.parse('[{"name":"\u0411\u043E\u043B\u0456\u0432\u0456\u044F","capital":"\u0421\u0443\u043A\u0440\u0435","currency":"\u0411\u043E\u043B\u0456\u0432\u0456\u0430\u043D\u043E (BOB)","language":"\u0406\u0441\u043F\u0430\u043D\u0441\u044C\u043A\u0430, \u043A\u0435\u0447\u0443\u0430, \u0430\u0439\u043C\u0430\u0440\u0430, \u0433\u0443\u0430\u0440\u0430\u043D\u0456","population":10461053,"flag":"https://wikiway.com/upload/iblock/5ed/800px-Flag_of_Bolivia.png","infected":true},{"name":"\u0412\u0435\u043B\u0438\u043A\u043E\u0431\u0440\u0438\u0442\u0430\u043D\u0456\u044F","capital":"\u041B\u043E\u043D\u0434\u043E\u043D","currency":"\u0424\u0443\u043D\u0442 \u0441\u0442\u0435\u0440\u043B\u0456\u043D\u0433\u0456\u0432 (GBP)","language":"\u0410\u043D\u0433\u043B\u0438\u0439\u0441\u043A\u0430","population":63395574,"flag":"https://wikiway.com/upload/iblock/5ec/800px-Flag_of_the_United_Kingdom_svg.png","infected":false},{"name":"\u042F\u043C\u0430\u0439\u043A\u0430","capital":"\u041A\u0456\u043D\u0433\u0441\u0442\u043E\u043D","currency":"\u042F\u043C\u0430\u0439\u0441\u043A\u0438\u0439 \u0434\u043E\u043B\u043B\u0430\u0440 (JMD)","language":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430","population":2868380,"flag":"https://wikiway.com/upload/iblock/b83/600px-Flag_of_Jamaica_svg.png","infected":false},{"name":"\u0428\u0432\u0435\u0446\u0456\u044F","capital":"\u0421\u0442\u043E\u043A\u0433\u043E\u043B\u044C\u043C","currency":"\u0428\u0432\u0435\u0434\u0441\u044C\u043A\u0430 \u043A\u0440\u043E\u043D\u0430 (SEK)","language":"\u0428\u0432\u0435\u0434\u0441\u044C\u043A\u0430","population":9723809,"flag":"https://wikiway.com/upload/iblock/5e3/800px-Flag_of_Sweden_svg.png","infected":true}]');
+},{"a07d2c2c4b11c39f":"eAEEU","18d5ff036a08fa06":"tCCrk"}],"jjjeP":[function(require,module,exports,__globalThis) {
+module.exports = JSON.parse('[{"hero":"Aragorn","weapon":"And\xfaril","skills":["Swordsmanship","Leadership","Tracking"],"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKWIYTbXKEZLocWHB1-W7YJgCtPE63NYaAg&usqp=CAU"},{"hero":"Legolas","weapon":"Bow of the Galadhrim","skills":["Archery","Swordsmanship","Agility"],"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS42x-0T51YGCrxbKZQbhsyoERYzHjGeE4jHw&usqp=CAU"},{"hero":"Gandalf","weapon":"Glamdring","skills":["Wizardry","Staff-fighting","Wisdom"],"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiMeZQlldJPmrcIQP-mWf0P4Iwt2vGuoZlLA&usqp=CAU"},{"hero":"Frodo Baggins","weapon":"Sting","skills":["Stealth","Courage","Resilience"],"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnsHhI7FcRqwTwDLhB3xBVRx8bfNQSxMW-DA&usqp=CAU"},{"hero":"Gollum","weapon":"His bare hands","skills":["Stealth","Climbing","Survival"],"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk8G_iAS6Crtfr4-Vno4SwvQbVyl00OQEzTw&usqp=CAU"}]');
 
 },{}]},["dyKFB","8lqZg"], "8lqZg", "parcelRequire94c2")
 
